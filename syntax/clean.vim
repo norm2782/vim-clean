@@ -14,7 +14,7 @@ syn keyword cleanTodo TODO TODO: FIXME FIXME: XXX XXX: BUG BUG: NB NB: contained
 syn region cleanComment start="//.*"    end="$"   contains=cleanTodo,@Spell oneline display
 syn region cleanComment start="//\*"    end="$"   contains=cleanTodo,@Spell oneline display
 syn region cleanComment start="^\s*/\*" end="\*/" contains=cleanTodo,@Spell fold
-syn region cleanComment start="/\*"     end="\*/" contains=cleanTodo,@Spell
+syn region cleanComment start="\(.*\/\/\)\@!/\*" end="\*/" contains=cleanTodo,@Spell
 
 syn keyword cleanConditional if case
 syn keyword cleanLabel let! let with where in of
