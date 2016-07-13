@@ -30,4 +30,8 @@ for tag_file_name in all_tag_files
   exec "set tags+=" . substitute(tag_file_name, "Clean System Files", "Clean\\\\\\\\\\\\\ System\\\\\\\\\\\\ Files", "") . ";"
 endfor
 
+setlocal tabstop=2
+setlocal shiftwidth=2
+setlocal expandtab
+
 let &cpo = s:save_cpo
